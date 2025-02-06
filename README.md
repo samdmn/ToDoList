@@ -6,4 +6,4 @@ need to remember.**
 I decided to create this little website to help me learn (and remember) HTML,
 CSS and JavaScript concepts before the 4th semester JavaScript course of my
 bachelor's degree. Also I was bored so I guess that it's a perfect way
-to combine business with pleasure.
+to combine business with pleasure !
