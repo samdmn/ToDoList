@@ -1,3 +1,7 @@
+<p align="center">
+    <a href="README_fr.md">French</a>
+</p>
+
 # Introducing my ToDo List website !
 
 **A ToDo List website allows you to create, complete and delete tasks that you
