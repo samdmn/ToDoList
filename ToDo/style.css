@@ -36,6 +36,18 @@
     justify-content: center;
 }
 
+#input-box {
+    border: none;
+    border-bottom: 1px solid black; /* Ajoute une bordure inférieure */
+    outline: none; /* Supprime l'effet de focus par défaut */
+}
+
+#input-box::before {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
 ul li {
     list-style: none;
     font-size: 17px;
@@ -59,9 +71,8 @@ ul li::before {
 }
 
 ul li.checked {
-    color: #555;
+    color: #5555557a;
     text-decoration: line-through;
-
 }
 
 ul li.checked::before {
