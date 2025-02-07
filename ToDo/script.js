@@ -7,19 +7,17 @@ var i = 1;
 // Function used to add a task to the list
 function ajouter_tache(){
     var text = input.value;
-    if (text == ""){
+    if (text === ""){
         return;
+    } 
+    else {
+        const new_task = document.createElement("li");
+        new_task.innerHTML = text;
+        new_task.id = i.toString();
+        tasks_list.appendChild(new_task);
+        input.value = "";
+        i+=1;
     }
-    const new_task = document.createElement("li");
-    const checkbox = document.createElement("input");
-    checkbox.type = "checkbox";
-    checkbox.id = i.toString();
-    new_task.innerText = text;
-    new_task.id = i.toString();
-    new_task.prepend(checkbox);
-    tasks_list.appendChild(new_task);
-    input.value = "";
-    i+=1;
 }
 
 // The task is added if you click on the button
@@ -31,3 +29,9 @@ input.addEventListener("keypress", function (event) {
         ajouter_tache();
     }
 });
+
+tasks_list.addEventListener("click", function(e){
+    if(e.target.tagName === "LI"){
+        e.target.classList.toggle("checked");
+    }
+}, false);
