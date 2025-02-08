@@ -2,6 +2,7 @@
 const addbutton = document.getElementById("add-button");
 const input = document.getElementById("input-box");
 const tasks_list = document.getElementById("tasks_list");
+const deletebutton = document.getElementsByClassName("delete");
 
 var i = 1;
 // Function used to add a task to the list
@@ -12,12 +13,15 @@ function ajouter_tache(){
     } 
     else {
         const new_task = document.createElement("li");
+        const deleteimage = document.createElement("span");
+        deleteimage.className = "delete";
         new_task.innerHTML = text;
         new_task.id = i.toString();
+        new_task.appendChild(deleteimage);
         tasks_list.appendChild(new_task);
-        input.value = "";
         i+=1;
     }
+    input.value = "";
 }
 
 // The task is added if you click on the button
@@ -33,5 +37,12 @@ input.addEventListener("keypress", function (event) {
 tasks_list.addEventListener("click", function(e){
     if(e.target.tagName === "LI"){
         e.target.classList.toggle("checked");
+    }
+}, false);
+
+tasks_list.addEventListener("click", function(e){
+    if(e.target.tagName === "SPAN"){
+        e.target.className = "deleted";
+        e.target.parentNode.parentNode.removeChild(e.target.parentNode);
     }
 }, false);

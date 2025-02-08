@@ -36,6 +36,10 @@
     justify-content: center;
 }
 
+#add-button {
+    margin-left: 10px;
+}
+
 #input-box {
     border: none;
     border-bottom: 1px solid black; /* Ajoute une bordure inférieure */
@@ -55,6 +59,8 @@ ul li {
     user-select: none;
     cursor: pointer;
     position: relative;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 ul li::before {
@@ -78,4 +84,16 @@ ul li.checked {
 ul li.checked::before {
     background-image: url(images/checked.png);   
 }
+
+ul li span.delete {
+    margin-left: 7px;
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    background-image: url(images/delete.png);
+    background-size: cover;
+    background-position: center;
+}
+
 
