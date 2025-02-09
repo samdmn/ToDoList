@@ -22,6 +22,7 @@ function ajouter_tache(){
         i+=1;
     }
     input.value = "";
+    saveData();
 }
 
 // The task is added if you click on the button
@@ -37,6 +38,7 @@ input.addEventListener("keypress", function (event) {
 tasks_list.addEventListener("click", function(e){
     if(e.target.tagName === "LI"){
         e.target.classList.toggle("checked");
+        saveData();
     }
 }, false);
 
@@ -44,5 +46,16 @@ tasks_list.addEventListener("click", function(e){
     if(e.target.tagName === "SPAN"){
         e.target.className = "deleted";
         e.target.parentNode.parentNode.removeChild(e.target.parentNode);
+        saveData();
     }
 }, false);
+
+function saveData(){
+    localStorage.setItem("data", tasks_list.innerHTML);
+}
+
+function showData(){
+    tasks_list.innerHTML = localStorage.getItem("data");
+}
+
+showData();
