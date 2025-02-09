@@ -3,7 +3,7 @@
     ·
     French
     ·
-    <a href="samdmn.github.io/ToDoList/">Official site</a>
+    <a href="https://samdmn.github.io/ToDoList/">Official site</a>
 </p>
 
 # Voici mon site de ToDo List !
