@@ -1,5 +1,9 @@
 <p align="center">
     <a href="README.md">English</a>
+    ·
+    French
+    ·
+    <a href="samdmn.github.io/ToDoList/">Official site</a>
 </p>
 
 # Voici mon site de ToDo List !

@@ -1,5 +1,10 @@
 <p align="center">
+    English
+    ·
     <a href="README_fr.md">French</a>
+    ·
+    <a href="samdmn.github.io/ToDoList/">Official site</a>
+
 </p>
 
 # Introducing my ToDo List website !
